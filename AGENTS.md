@@ -23,10 +23,15 @@ Applies to every project, on every machine this is installed on.
   2026-09-18; the old ones were deleted 2026-09-23 (git history has them), never referenced as
   current again). A brand-new repo with no `HANDOFF.md` yet: create it on the first session
   that needs one, and only one, at the root.
+- **Secrets live in Google Password Manager** (the owner's choice, 2026-10-18; passwords.google.com, the one
+  built into Chrome). Never suggest Bitwarden or another vault. Passwords, API keys, tokens, server secrets and
+  the passwords of key files go there as a password or a note, saved by the owner himself - agents never type,
+  store or print them. A plain-text secret file (e.g. `Cloudflare server keys.txt`) is moved there by the owner,
+  then deleted.
 - **New repo, first thing: sync it.** Right after creating it on GitHub, run
   `python "$env:USERPROFILE\.claude\sync_repos.py" --apply` (or panel -> Rules -> Apply to
   all repos) so it gets `AGENTS.md` and the session-start hook. Without `gh` installed, add
   the repo to `CLAUDE REPO/repos.txt` first or the sync never sees it.
 
-Generated from `CLAUDE REPO/claude-global/standing-instructions.md` (AI-Development).
+Generated from `CLAUDE REPO/claude-global/standing-instructions.md` (Revitaal).
 Edit it there, not here - this copy is overwritten. Why: `CLAUDE REPO/README.md`.
