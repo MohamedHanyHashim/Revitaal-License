@@ -28,6 +28,12 @@ Applies to every project, on every machine this is installed on.
   the passwords of key files go there as a password or a note, saved by the owner himself - agents never type,
   store or print them. A plain-text secret file (e.g. `Cloudflare server keys.txt`) is moved there by the owner,
   then deleted.
+- **G: is the main place for everything we make** (the owner, 2026-10-18; "always", 2026-10-19). Products,
+  programs, guides, sites, license files and project files live first in Google Drive
+  `G:\My Drive\Mohamed Hany Projects`; every other place (`D:\Mohamed Hany Projects`, the USB `E:`, another PC) is a
+  copy taken FROM G:. Change G: first, then copy out; never leave G: behind a copy. Code lives in git (GitHub is its
+  main copy) and G: keeps a pulled clone of each repo's source. After copying, check the copies equal G:; a copy that
+  could not be made (USB unplugged) goes into the handoff with the command that makes it.
 - **New repo, first thing: sync it.** Right after creating it on GitHub, run
   `python "$env:USERPROFILE\.claude\sync_repos.py" --apply` (or panel -> Rules -> Apply to
   all repos) so it gets `AGENTS.md` and the session-start hook. Without `gh` installed, add
