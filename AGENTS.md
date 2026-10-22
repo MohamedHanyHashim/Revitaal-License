@@ -47,6 +47,13 @@ Applies to every project, on every machine this is installed on.
   MCP / API (Revitaal MCP for Revit); computer use only when nothing else can go on (a hung app to restart, a dialog
   the API cannot answer). A script that changes anything is run ONCE - to see its result, read the state with a
   separate read-only call; a write re-sent "to check" runs again even when the client timed out (it made duplicates).
+- **A command given to the owner must work as given** (the owner, 2026-10-22: "every command you give me fails"). His
+  shell is Windows PowerShell 5.1, NOT elevated, in the Claude app's terminal. Before handing over any command: run it
+  yourself in the same kind of shell when it is read-only or harmless, or at least check its syntax and the rights it
+  needs. Anything that needs Administrator (services, HKLM, Program Files, drivers) says so on its first line and is
+  given in a form that asks for elevation itself - `Start-Process powershell -Verb RunAs -ArgumentList '-NoProfile',
+  '-Command','<cmd>; pause'` - or replaced by a no-admin way (a Settings page: `start ms-settings:<page>`). Never hand
+  over a command you have not checked; say plainly what you could not test.
 
 Generated from `CLAUDE REPO/claude-global/standing-instructions.md` (Revitaal).
 Edit it there, not here - this copy is overwritten. Why: `CLAUDE REPO/README.md`.
