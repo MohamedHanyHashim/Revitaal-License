@@ -54,6 +54,10 @@ Applies to every project, on every machine this is installed on.
   given in a form that asks for elevation itself - `Start-Process powershell -Verb RunAs -ArgumentList '-NoProfile',
   '-Command','<cmd>; pause'` - or replaced by a no-admin way (a Settings page: `start ms-settings:<page>`). Never hand
   over a command you have not checked; say plainly what you could not test.
+  **No placeholders in it** (the owner, 2026-10-22: "never again, in any repo or folder"): no `<v>`, `<path>`,
+  `<file>`, `X.Y.Z`, `YOUR_...`. `<` and `>` are PowerShell operators, so `<v>` stops the whole line (a publish
+  command, 10-22). Fill in the real values and check every file it names exists; when a value does not exist yet (a
+  version not built), give no command - say what has to happen first.
 
 Generated from `CLAUDE REPO/claude-global/standing-instructions.md` (Revitaal).
 Edit it there, not here - this copy is overwritten. Why: `CLAUDE REPO/README.md`.
