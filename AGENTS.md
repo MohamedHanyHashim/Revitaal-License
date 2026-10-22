@@ -28,6 +28,9 @@ Applies to every project, on every machine this is installed on.
   Read START HERE + Rules only; grep the Log or `git log` for the rest. Each fact once, latest value
   only; DONE Log entries older than 7 days shrink to 1-3 lines. Never stage binaries or files over 1 MB
   unless the owner says so.
+  **"Remind me every session"** (the owner, 2026-10-22): write it as the FIRST block of START HERE - what to tell
+  him, in his language, and until when - so every next session says it before anything else; delete it when the
+  condition is met. Never only in the Log or in chat.
 - **Secrets live in Google Password Manager** (the owner's choice, 2026-10-18; passwords.google.com, the one
   built into Chrome). Never suggest Bitwarden or another vault. Passwords, API keys, tokens, server secrets and
   the passwords of key files go there as a password or a note, saved by the owner himself - agents never type,
@@ -58,6 +61,10 @@ Applies to every project, on every machine this is installed on.
   `<file>`, `X.Y.Z`, `YOUR_...`. `<` and `>` are PowerShell operators, so `<v>` stops the whole line (a publish
   command, 10-22). Fill in the real values and check every file it names exists; when a value does not exist yet (a
   version not built), give no command - say what has to happen first.
+- **One folder, several sessions** (2026-10-22): another session may be working in the same checkout. Never put old
+  code over the shared tree to look at it (`git checkout <commit> -- <path>`, `stash`, `reset`) - it stages too, and the
+  other session's commit took it and reverted a fix (Revitaal 702c324). Use `git show <commit>:<path>` or a worktree.
+  Commit only your own paths: `git commit -m "..." -- <paths>`, never `-a` / `-A`.
 
 Generated from `CLAUDE REPO/claude-global/standing-instructions.md` (Revitaal).
 Edit it there, not here - this copy is overwritten. Why: `CLAUDE REPO/README.md`.
