@@ -9,6 +9,9 @@
 # All logic is in audit_env.py - this shim deliberately has no jq or other
 # dependency, because a hook whose command is missing fails on every event.
 # Never fails the session: no python, or no script, just means no report.
+# Run by all four apps from the repo root: Claude (.claude/settings.json), Codex (.codex/hooks.json),
+# Gemini CLI (.gemini/settings.json, passes --json: it reads stdout as JSON) and OpenCode
+# (.opencode/plugins/session-start.js).
 set -uo pipefail
 
 AUDIT=""
@@ -19,7 +22,7 @@ done
 
 for py in python3 python py; do
   if command -v "$py" >/dev/null 2>&1; then
-    "$py" "$AUDIT" --hook || true
+    "$py" "$AUDIT" --hook "$@" || true
     exit 0
   fi
 done

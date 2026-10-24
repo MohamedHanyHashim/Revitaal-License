@@ -1,0 +1,17 @@
+{
+  "description": "Codex's copy of .claude/settings.json: the session-start environment audit. Commands run in the session folder (the repo root).",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/session-start.sh",
+            "statusMessage": "Environment audit"
+          }
+        ]
+      }
+    ]
+  }
+}
