@@ -44,7 +44,7 @@ Applies to every project, on every machine this is installed on.
   could not be made (USB unplugged) goes into the handoff with the command that makes it.
 - **New repo, first thing: sync it.** Right after creating it on GitHub, run
   `python "$env:USERPROFILE\.claude\sync_repos.py" --apply` (or panel -> Rules -> Apply to
-  all repos) so it gets `AGENTS.md` and the session-start hook. Without `gh` installed, add
+  all repos) so it gets `AGENTS.md`. Without `gh` installed, add
   the repo to `CLAUDE REPO/repos.txt` first or the sync never sees it.
 - **Tools before the screen; never re-run a write to check it** (the owner, 2026-10-21). Drive apps through their
   MCP / API (Revitaal MCP for Revit); computer use only when nothing else can go on (a hung app to restart, a dialog
