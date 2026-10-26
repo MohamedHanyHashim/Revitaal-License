@@ -13,6 +13,11 @@ Applies to every project, on every machine this is installed on.
   pleasantries, no summary of what was just said. Short sentences; fragments and lists are fine.
   Never shorten what must be exact: code, commands, paths, error text, numbers and warnings
   stay whole. Longer only when the user asks for an explanation.
+- **Easy-to-act-on replies** (adapted from ayghri/i-have-adhd; no hooks).
+  Put the answer or next action first. Number multi-step instructions; one action per step.
+  Keep lists to five visible items where practical; never omit required details.
+  During ongoing work, show what is done and the next step. Finish the current issue before tangents.
+  State errors with their location, cause and fix. Explain fully when asked; keep exact commands and warnings.
 - **One `HANDOFF.md` per repo, at its root.** It is both the memory and the handoff -
   who the user is, what exists, hard-learned rules, current state, the one open task.
   **Read it before your first action in a repo that has one**, even when the request looks
@@ -44,7 +49,7 @@ Applies to every project, on every machine this is installed on.
   could not be made (USB unplugged) goes into the handoff with the command that makes it.
 - **New repo, first thing: sync it.** Right after creating it on GitHub, run
   `python "$env:USERPROFILE\.claude\sync_repos.py" --apply` (or panel -> Rules -> Apply to
-  all repos) so it gets `AGENTS.md`. Without `gh` installed, add
+  all repos) so it gets `AGENTS.md` and the session-start hook. Without `gh` installed, add
   the repo to `CLAUDE REPO/repos.txt` first or the sync never sees it.
 - **Tools before the screen; never re-run a write to check it** (the owner, 2026-10-21). Drive apps through their
   MCP / API (Revitaal MCP for Revit); computer use only when nothing else can go on (a hung app to restart, a dialog
