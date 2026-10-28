@@ -58,7 +58,8 @@ Applies to every project, on every machine this is installed on.
   the API cannot answer). A script that changes anything is run ONCE - to see its result, read the state with a
   separate read-only call; a write re-sent "to check" runs again even when the client timed out (it made duplicates).
 - **A command given to the owner must work as given** (the owner, 2026-10-22: "every command you give me fails"). His
-  shell is Windows PowerShell 5.1, NOT elevated, in the Claude app's terminal. Before handing over any command: run it
+  shell is Windows PowerShell 5.1, NOT elevated, in the Claude app's terminal; its execution policy blocks scripts, so a
+  `.ps1` is given as `powershell -NoProfile -ExecutionPolicy Bypass -File` + its full quoted path (10-28). Before handing over any command: run it
   yourself in the same kind of shell when it is read-only or harmless, or at least check its syntax and the rights it
   needs. Anything that needs Administrator (services, HKLM, Program Files, drivers) says so on its first line and is
   given in a form that asks for elevation itself - `Start-Process powershell -Verb RunAs -ArgumentList '-NoProfile',
