@@ -52,7 +52,7 @@ Applies to every project, on every machine this is installed on.
   `git push origin main`, never force; rejected: `git pull --ff-only origin main`, push once more; still rejected: tell
   him why. This session made a rule for every repo: same text into `CLAUDE REPO\claude-global\standing-instructions.md`
   and root `AGENTS.md` in `D:\MH AI\Revitaal`, push it, then `python "D:\MH AI\Revitaal\CLAUDE REPO\sync_repos.py"
-  --apply`. A skill lesson: into `D:\MH AI\MH WYA`, push it. Report the commit, what was left out, the next step.
+  --apply`. A skill lesson: into its skill (`revitaal-lessons` in `D:\MH AI\Revitaal`, `jr-engineer` in `D:\MH AI\MH WYA`), push it. Report the commit, what was left out, the next step.
 - **Check before "done".** Run the test, the build or the tool, read its output, then report. Say plainly what
   was not checked. Never call something fixed from reading the code alone. The check is read-only: never
   re-run something that changes a model or files to check it.
