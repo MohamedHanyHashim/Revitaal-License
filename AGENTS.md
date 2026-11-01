@@ -38,6 +38,25 @@ Applies to every project, on every machine this is installed on.
   **"Remind me every session"** (the owner, 2026-10-22): write it as the FIRST block of START HERE - what to tell
   him, in his language, and until when - so every next session says it before anything else; delete it when the
   condition is met. Never only in the Log or in chat.
+- **pull and push** (the owner, 2026-11-01). His whole message is `pull` or `push`, in any repo and any agent: do it in
+  the repo you are in, answer in his language. Not a git clone: tell him the folder and stop; clone only when he says.
+  Not on `main`: tell him the branch and stop.
+  **pull:** `git pull --ff-only origin main` (fails: say why; never stash or reset). Read `HANDOFF.md` START HERE + Rules
+  only (an older handoff: its open section), FAILED before retrying anything. Report where we are, the open task, the
+  next step. Do not start the task until he says.
+  **push:** Update `HANDOFF.md` in place, in its shape above (none: create it at the root). `git status` + `git diff`:
+  only this session's files; no secrets, binaries or files over 1 MB. `git add` by path (never `-A`), `git commit`,
+  `git push origin main`, never force; rejected: `git pull --ff-only origin main`, push once more; still rejected: tell
+  him why. This session made a rule for every repo: same text into `CLAUDE REPO\claude-global\standing-instructions.md`
+  and root `AGENTS.md` in `D:\MH AI\Revitaal`, push it, then `python "D:\MH AI\Revitaal\CLAUDE REPO\sync_repos.py"
+  --apply`. A skill lesson: into `D:\MH AI\MH WYA`, push it. Report the commit, what was left out, the next step.
+- **Check before "done".** Run the test, the build or the tool, read its output, then report. Say plainly what
+  was not checked. Never call something fixed from reading the code alone. The check is read-only: never
+  re-run something that changes a model or files to check it.
+- **Revit models (Revitaal MCP).** Read before changing: say what will change and how many elements, then change
+  it in one Transaction so one Ctrl+Z undoes it. Use a Revitaal tool when one does the job, code only when none
+  does. Never save, sync, close, purge or delete views / sheets unless asked. On a big or central model, try the
+  change on a few elements or a detached copy first.
 - **Secrets live in Google Password Manager** (the owner's choice, 2026-10-18; passwords.google.com, the one
   built into Chrome). Never suggest Bitwarden or another vault. Passwords, API keys, tokens, server secrets and
   the passwords of key files go there as a password or a note, saved by the owner himself - agents never type,
@@ -50,8 +69,7 @@ Applies to every project, on every machine this is installed on.
   main copy) and G: keeps a pulled clone of each repo's source. After copying, check the copies equal G:; a copy that
   could not be made (USB unplugged) goes into the handoff with the command that makes it.
 - **New repo, first thing: sync it.** Right after creating it on GitHub, run
-  `python "$env:USERPROFILE\.claude\sync_repos.py" --apply` (or panel -> Rules -> Apply to
-  all repos) so it gets `AGENTS.md`. Without `gh` installed, add
+  `python "D:\MH AI\Revitaal\CLAUDE REPO\sync_repos.py" --apply` so it gets `AGENTS.md`. Without `gh` installed, add
   the repo to `CLAUDE REPO/repos.txt` first or the sync never sees it.
 - **Tools before the screen; never re-run a write to check it** (the owner, 2026-10-21). Drive apps through their
   MCP / API (Revitaal MCP for Revit); computer use only when nothing else can go on (a hung app to restart, a dialog
