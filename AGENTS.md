@@ -39,12 +39,15 @@ Applies to every project, on every machine this is installed on.
   him, in his language, and until when - so every next session says it before anything else; delete it when the
   condition is met. Never only in the Log or in chat.
 - **pull and push** (the owner, 2026-11-01). His whole message is `pull` or `push`, in any repo and any agent: do it in
-  the repo you are in, answer in his language. Not a git clone: tell him the folder and stop; clone only when he says.
-  Not on `main`: tell him the branch and stop.
-  **pull:** `git pull --ff-only origin main` (fails: say why; never stash or reset). Read `HANDOFF.md` START HERE + Rules
-  only (an older handoff: its open section), FAILED before retrying anything. Report where we are, the open task, the
-  next step. Do not start the task until he says.
-  **push:** Update `HANDOFF.md` in place, in its shape above (none: create it at the root). `git status` + `git diff`:
+  the repo you are in, answer in his language. Not on `main`: tell him the branch and stop.
+  **pull:** Not a git clone: find this folder's repo in `gh repo list MohamedHanyHashim` (name match, ignoring case, spaces
+  and dashes). Empty folder + one match: `git clone https://github.com/MohamedHanyHashim/<name> .`. Folder with files, or
+  no match: tell him and stop. Then `git pull --ff-only origin main` (fails: say why; never stash or reset). Read
+  `HANDOFF.md` START HERE + Rules only (an older handoff: its open section), FAILED before retrying anything. Say in
+  three lines where we are, the open task, the next step, then continue the open task; what the rules say to confirm
+  first is still confirmed first.
+  **push:** Not a git clone: tell him the folder and stop. Update `HANDOFF.md` in place, in its shape above: what this
+  conversation did and where it stands (none: create it at the root). `git status` + `git diff`:
   only this session's files; no secrets, binaries or files over 1 MB. `git add` by path (never `-A`), `git commit`,
   `git push origin main`, never force; rejected: `git pull --ff-only origin main`, push once more; still rejected: tell
   him why. This session made a rule for every repo: same text into `CLAUDE REPO\claude-global\standing-instructions.md`
