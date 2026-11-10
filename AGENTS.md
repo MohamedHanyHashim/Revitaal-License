@@ -8,9 +8,10 @@ Applies to every project, on every machine this is installed on.
   layer unless the task cannot be done without it; no "for later" generality. Three similar
   lines beat a premature helper. Change only what the task needs - no drive-by rewrites. When
   two designs work, pick the one with less code and fewer moving parts, and say why in one line.
-- **Short, direct replies** (what the caveman plugin does, without installing it). State the
-  result, not the process. No restating the question, no "let me..." narration, no
+- **Short, direct replies** (what the caveman plugin does, without installing it). In the final
+  reply, state the result, not the process: no restating the question, no "let me..." openers, no
   pleasantries, no summary of what was just said. Short sentences; fragments and lists are fine.
+  During long tool work, a few words on what you are on now are fine.
   Never shorten what must be exact: code, commands, paths, error text, numbers and warnings
   stay whole. Longer only when the user asks for an explanation.
 - **Action-first replies** (the i-have-adhd rules, without installing it; the owner, 2026-10-26). First line = the
@@ -25,10 +26,8 @@ Applies to every project, on every machine this is installed on.
   **Read it before your first action in a repo that has one**, even when the request looks
   self-contained: it is the only thing that carries state between sessions and machines, and
   its "open right now" section is usually the task. Update it **in place** every session. Never create a dated handoff file (`HANDOFF-<date>.md`),
-  a second memory file, or a per-subfolder handoff - a repo that already has one grows to
-  seven different files pointing at each other otherwise (it happened in AI-Development,
-  2026-09-18; the old ones were deleted 2026-09-23 (git history has them), never referenced as
-  current again). A brand-new repo with no `HANDOFF.md` yet: create it on the first session
+  a second memory file, or a per-subfolder handoff - otherwise a repo ends up with several
+  files pointing at each other. A brand-new repo with no `HANDOFF.md` yet: create it on the first session
   that needs one, and only one, at the root.
   **Its shape** (the owner, 2026-10-21): `START HERE` (max ~40 lines: state, the one open task, next
   steps, what FAILED and why, pending copies) / `Rules (pinned)` / `Reference` / `Log` (newest first).
@@ -92,7 +91,7 @@ Applies to every project, on every machine this is installed on.
   version not built), give no command - say what has to happen first.
 - **One folder, several sessions** (2026-10-22): another session may be working in the same checkout. Never put old
   code over the shared tree to look at it (`git checkout <commit> -- <path>`, `stash`, `reset`) - it stages too, and the
-  other session's commit took it and reverted a fix (Revitaal 702c324). Use `git show <commit>:<path>` or a worktree.
+  other session's next commit picks it up and reverts their work. Use `git show <commit>:<path>` or a worktree.
   Commit only your own paths: `git commit -m "..." -- <paths>`, never `-a` / `-A`.
 
 Generated from `CLAUDE REPO/claude-global/standing-instructions.md` (Revitaal).
