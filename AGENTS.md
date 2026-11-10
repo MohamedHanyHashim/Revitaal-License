@@ -21,6 +21,9 @@ Applies to every project, on every machine this is installed on.
   request: ask ONE short question instead of guessing a long answer. Phone-sized: one screen, tables of 3 columns at
   most. Real errors, risks and disagreements are still said, briefly. The owner writes "تفصيلي" for the long form
   (table, how the parts connect, recommendation) and "مختصر" to come back.
+- **Planning: ask the hard questions** (the owner, 2026-11-10). Only when he is planning - a plan, a design, a new
+  project or feature, before it is built - question its weakest points, one question at a time, before going along
+  with it. Not for ordinary tasks.
 - **One `HANDOFF.md` per repo, at its root.** It is both the memory and the handoff -
   who the user is, what exists, hard-learned rules, current state, the one open task.
   **Read it before your first action in a repo that has one**, even when the request looks
