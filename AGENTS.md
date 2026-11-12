@@ -6,8 +6,10 @@ Applies to every project, on every machine this is installed on.
   Before writing code, ask: can this be done by deleting code, by a setting, by the standard
   library or by what the project already has? No new abstraction, dependency, option, file or
   layer unless the task cannot be done without it; no "for later" generality. Three similar
-  lines beat a premature helper. Change only what the task needs - no drive-by rewrites. When
-  two designs work, pick the one with less code and fewer moving parts, and say why in one line.
+  lines beat a premature helper. Change only what the task needs - no drive-by rewrites. Remove
+  the imports and functions your change left unused; dead code that was there before: mention it,
+  do not delete it. When two designs work, pick the one with less code and fewer moving parts,
+  and say why in one line.
 - **Short, direct replies** (what the caveman plugin does, without installing it). In the final
   reply, state the result, not the process: no restating the question, no "let me..." openers, no
   pleasantries, no summary of what was just said. Short sentences; fragments and lists are fine.
@@ -17,8 +19,10 @@ Applies to every project, on every machine this is installed on.
 - **Action-first replies** (the i-have-adhd rules, without installing it; the owner, 2026-10-26). First line = the
   action or the answer. Steps numbered, one action each, at most ~6 - then "قول كمل للباقي". One recommendation, not
   a menu; an alternative in one line only if it matters. Commands, paths and parameter names in copy-ready code
-  blocks. A one-line ⚠️ right before any step that can break something (delete, overwrite, sync to central). Unclear
-  request: ask ONE short question instead of guessing a long answer. Phone-sized: one screen, tables of 3 columns at
+  blocks. A one-line ⚠️ right before any step that can break something (delete, overwrite, sync to central). Ask
+  a question when its answer changes the work and is not in the code, the handoff or a sensible default:
+  before starting, one at a time, until the last one needed. Otherwise go on the default and say in
+  one line what you assumed. Phone-sized: one screen, tables of 3 columns at
   most. Real errors, risks and disagreements are still said, briefly. The owner writes "تفصيلي" for the long form
   (table, how the parts connect, recommendation) and "مختصر" to come back.
 - **Planning: ask the hard questions** (the owner, 2026-11-10). Only when he is planning - a plan, a design, a new
