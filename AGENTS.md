@@ -9,7 +9,8 @@ Applies to every project, on every machine this is installed on.
   lines beat a premature helper. Change only what the task needs - no drive-by rewrites. Remove
   the imports and functions your change left unused; dead code that was there before: mention it,
   do not delete it. When two designs work, pick the one with less code and fewer moving parts,
-  and say why in one line.
+  and say why in one line. Before fixing a shared function, check all its callers and fix the root
+  cause once; when moving or merging code, keep its validation and error handling.
 - **Short, direct replies** (what the caveman plugin does, without installing it). In the final
   reply, state the result, not the process: no restating the question, no "let me..." openers, no
   pleasantries, no summary of what was just said. Short sentences; fragments and lists are fine.
@@ -59,7 +60,8 @@ Applies to every project, on every machine this is installed on.
   him why. This session made a rule for every repo: same text into `CLAUDE REPO\claude-global\standing-instructions.md`
   and root `AGENTS.md` in `D:\MH AI\Revitaal`, push it, then `python "D:\MH AI\Revitaal\CLAUDE REPO\sync_repos.py"
   --apply`. A skill lesson: into its skill (`revitaal-lessons` in `D:\MH AI\Revitaal`, `jr-engineer` in `D:\MH AI\MH WYA`), push it. Report the commit, what was left out, the next step.
-- **Check before "done".** Run the test, the build or the tool, read its output, then report. Say plainly what
+- **Check before "done".** Before changing anything, name the check that will prove it works. Then run the
+  test, the build or the tool, read its output, then report. Say plainly what
   was not checked. Never call something fixed from reading the code alone. The check is read-only: never
   re-run something that changes a model or files to check it.
 - **Revit models (Revitaal MCP).** Read before changing: say what will change and how many elements, then change
