@@ -40,8 +40,9 @@ Applies to every project, on every machine this is installed on.
   **Its shape** (the owner, 2026-10-21): `START HERE` (max ~40 lines: state, the one open task, next
   steps, what FAILED and why, pending copies) / `Rules (pinned)` / `Reference` / `Log` (newest first).
   Read START HERE + Rules only; grep the Log or `git log` for the rest. Each fact once, latest value
-  only; DONE Log entries older than 7 days shrink to 1-3 lines. Never stage binaries or files over 1 MB
-  unless the owner says so.
+  only; DONE Log entries older than 7 days shrink to 1-3 lines. Binaries and files over 1 MB are staged when
+  they matter (guides, setups or data the repo needs - the owner, 2026-11-16); never secrets, caches, build or
+  test output.
   **"Remind me every session"** (the owner, 2026-10-22): write it as the FIRST block of START HERE - what to tell
   him, in his language, and until when - so every next session says it before anything else; delete it when the
   condition is met. Never only in the Log or in chat.
@@ -55,7 +56,8 @@ Applies to every project, on every machine this is installed on.
   first is still confirmed first.
   **push:** Not a git clone: tell him the folder and stop. Update `HANDOFF.md` in place, in its shape above: what this
   conversation did and where it stands (none: create it at the root). `git status` + `git diff`:
-  only this session's files; no secrets, binaries or files over 1 MB. `git add` by path (never `-A`), `git commit`,
+  only this session's files; no secrets, caches or build output (files over 1 MB only when they matter).
+  `git add` by path (never `-A`), `git commit`,
   `git push origin main`, never force; rejected: `git pull --ff-only origin main`, push once more; still rejected: tell
   him why. This session made a rule for every repo: same text into `CLAUDE REPO\claude-global\standing-instructions.md`
   and root `AGENTS.md` in `D:\MH AI\Revitaal`, push it, then `python "D:\MH AI\Revitaal\CLAUDE REPO\sync_repos.py"
