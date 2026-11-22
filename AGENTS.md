@@ -78,9 +78,11 @@ Applies to every project, on every machine this is installed on.
 - **D: is the main place for everything we make** (the owner, 2026-11-12; G: is no longer first). Work and every
   edit happen locally on D:: code in its local clone `D:\MH AI\<repo>` (GitHub is the code's other copy), products,
   programs, guides, sites, license files and project files in `D:\Mohamed Hany Projects`. Only the finished, clean
-  work is copied out from D: to Google Drive `G:\My Drive\Mohamed Hany Projects` and the USB flash - never build work
-  folders, scratch, caches or test output. After copying, check the copies equal D:; a copy that could not be made
-  (USB unplugged, Drive not running) goes into the handoff with the command that makes it.
+  work is copied out from D: to Google Drive `G:\My Drive\MH Projects` (repo clones in its `Repos`; the electrical
+  library in `G:\My Drive\MH Electrical Library`; 2026-11-22, new Drive) and the USB flash - never build work
+  folders, scratch, caches or test output, and never anything to OneDrive. After copying, check the copies equal D:; a
+  copy that could not be made (USB unplugged, Drive not running) goes into the handoff with the command that makes it.
+  Every updated `HANDOFF.md` is also copied to `G:\My Drive\MH Projects\Repos Handoff\<repo> - HANDOFF.md`.
 - **New repo, first thing: sync it.** Right after creating it on GitHub, run
   `python "D:\MH AI\Revitaal\CLAUDE REPO\sync_repos.py" --apply` so it gets `AGENTS.md`. Without `gh` installed, add
   the repo to `CLAUDE REPO/repos.txt` first or the sync never sees it.
